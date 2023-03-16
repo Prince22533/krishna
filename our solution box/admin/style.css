@@ -1,0 +1,471 @@
+/*common css*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	user-select: none;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+:root{
+	--primary: ;
+	--font-size-5: 45px;
+	--font-size-4: 35px;
+	--font-size-3: 25px;
+	--font-size-2: 17px;
+	--padding-4: 35px;
+	--padding-3: 30px;
+	--padding-2: 20px;
+	--padding-1: 10px;
+}
+.container{
+	margin: 0 7%;
+}
+body{
+	background: grey;
+}	
+.fs-1{
+	font-size: 15px;
+}
+.fs-2{
+	font-size: 25px;
+}
+.fs-3{
+	font-size: 30px;
+}
+i{
+	color: var(--primary);
+}
+
+
+@media screen and (max-width:600px){
+	.fs-1{
+	font-size: 15px;
+	}
+	.fs-2{
+		font-size: 25px;
+	}
+	.fs-3{
+		font-size: 30px;
+	}
+	:root{
+	--primary: ;
+	--font-size-5: 35px;
+	--font-size-4: 25px;
+	--font-size-3: 15px;
+	--font-size-2: 10px;
+	--padding-4: 20px;
+	--padding-3: 15px;
+	--padding-2: 10px;
+	--padding-1: 5px;
+}
+}
+
+/*end common css*/
+
+/*Home header*/
+.home-header{
+	background: var(--primary);
+	padding: var(--padding-3) 0;
+	height: auto;
+	text-align: center;
+	width: 100%;
+
+}
+.home-header h1{
+	color: white;
+	font-size: var(--font-size-3);
+}
+/*.home-header input{
+	float: right;
+	font-size: var(--font-size-3);
+	border-radius: 14px;
+	display: inline;
+	padding: var(--padding-1);
+	width: 500px;
+	border: none;
+}*/
+/*end home header*/
+
+/*navigation*/
+.navigation{
+	background: white;
+
+}
+.navigation ul{
+	width: 100%;
+
+	display : flex;
+	justify-content: space-between;
+}
+.navigation ul a{
+	color: var(--primary);
+}
+.navigation ul li{
+	font-size: var(--font-size-3);
+	padding: 5px var(--padding-2);
+	border: 1px solid white;
+}
+.navigation ul .active{
+	display : inline-block;
+	background: var(--primary);
+	color: white;
+}
+.navigation .checkbtn{
+	font-size: 20px;
+	color: white;
+	float: right;
+	margin-right: 40px;
+}
+.navigation #check, .checkbtn{
+	display: none;
+}
+@media screen and (max-width:600px){
+	
+	.navigation .checkbtn{
+		display: block;
+		position: absolute;
+		top: 0px;
+	}
+	.navigation .checkbtn i{
+		color: white;
+	}
+	.navigation ul{
+		position: fixed;
+		width: 50%;
+		height: auto;
+		top: 45px;
+		left: -100%;
+		text-align: center;
+		display : flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: black;
+		opacity: 0.7;
+		border: 1px solid black;
+	}
+	.navigation nav ul li{
+		display: block;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+}
+
+
+/*end navigation*/
+
+/*post*/
+.post{
+	display: flow-root;
+}
+.post .view, .add-post .view, .add-user .view, .setting .view{
+	background: var(--primary);
+	font-size: var(--font-size-3);
+	float: right;
+	color: white;
+	border: 1px solid black;
+	margin: 40px 100px 10px 0; 
+	padding: var(--padding-1);
+	cursor: pointer;
+}
+
+@media screen and (max-width:600px){
+	.post .view, .add-post .view, .add-user .view, .setting .view{
+	background: var(--primary);
+	font-size: var(--font-size-2);
+	color: white;
+	border: 1px solid black;
+	padding: var(--padding-1);
+	cursor: pointer;
+	float: left;
+	margin: 10px;
+	}
+}
+
+.post .post-table .post-th{
+	background: var(--primary);
+	color: white;
+	font-size: var(--font-size-3);
+}
+.post .post-table table{
+	background: white;
+	margin: 60px auto !important; 
+	text-align: center;
+	border-collapse: collapse;
+	width: 800px;
+	height: 300px;
+	font-size: var(--font-size-2);
+}
+@media screen and (max-width:600px){
+	.post .post-table table{
+	background: white;
+	margin: 10px; 
+	text-align: center;
+	border-collapse: collapse;
+	width: 100%;
+	height: auto;
+	font-size: var(--font-size-2);
+	}
+	.post .post-table table th, td{
+		padding: 4px;
+	}
+}
+/*end post*/
+
+/* pagination */
+.pagination{
+	margin-bottom: 20px;
+}
+.pagination ul{
+	text-align: center;
+}
+.pagination ul a{
+	color: var(--primary);
+}
+.pagination ul li{
+	display : inline-block;
+	padding: 0 var(--padding-1);
+	font-size: var(--font-size-3);
+	margin: 10px;
+	color: white;
+	background: var(--primary); 
+	border: 1px solid white;
+}
+
+@media screen and (max-width:600px){
+	.pagination{
+	margin-bottom: 10px;
+	}
+	.pagination ul li{
+	display : inline-block;
+	padding: 0 var(--padding-1);
+	font-size: var(--font-size-2);
+	margin: 5px;
+	color: white;
+	background: var(--primary); 
+	border: 1px solid white;
+	}
+}
+/*end pagination*/
+
+/*add-post*/
+.add-post{
+	background: white;
+	margin: 100px 100px 0 200px;
+	font-size: var(--font-size-2);
+	display: flow-root;
+}
+.arrow i{
+	font-size: var(--font-size-5);
+	margin: 50px 0 0 100px;
+}
+.add-post #des{
+	height: 100px;
+	width: 300px;
+}
+.add-post .post-th{
+	background: var(--primary);
+	color: white;
+	font-size: var(--font-size-3);
+	padding: var(--padding-3);
+	text-align: center;
+}
+.add-post input, label{
+	margin: 10px;
+}
+
+
+@media screen and (max-width:600px){
+	.add-post{
+	background: white;
+	margin: 5px 5px 0 10px;
+	font-size: 30px;
+	display: flow-root;
+	}
+	.arrow i{
+	font-size: var(--font-size-4);
+	margin: 5px 0 0 10px;
+	}
+	.add-post #des{
+	height: 60px;
+	width: 100px;
+	}
+}
+/*end add-post*/
+
+/*add user*/
+.add-user{
+	background: white;
+	margin: 50px 100px 0 200px;
+	font-size: var(--font-size-2);
+	display: flow-root;
+}
+.add-user .post-th{
+	background: var(--primary);
+	color: white;
+	font-size: var(--font-size-3);
+	padding: 30px;
+	text-align: center;
+}
+.add-user input, label{
+	margin: 10px;
+	font-size: var(--font-size-3);
+	padding: var(--padding-1);
+}
+
+@media screen and (max-width:600px){
+	.add-user{
+	background: white;
+	margin: 5px 5px 10px 10px;
+	font-size: 30px;
+	display: flow-root;
+	}
+	.add-user .post-th{
+	padding: 20px;
+	}
+}
+/*end add user*/
+
+/*comment*/
+.add-post input, label{
+	margin: 10px;
+	font-size: var(--font-size-3);
+	padding: var(--padding-1);
+}
+/*end comment*/
+
+/*setting*/
+.setting  form{
+	background: white;
+	margin: 0px 100px 40px 200px;
+	display: flow-root;
+}
+.setting form .post-th{
+	background: var(--primary);
+	color: white;
+	font-size: var(--font-size-3);
+	padding: var(--padding-3);
+	text-align: center;
+}
+.setting form input, label{
+	margin: 10px;
+	font-size: var(--font-size-2);
+	padding: var(--padding-1);
+}
+
+@media screen and (max-width:600px){
+	.setting  form{
+	background: white;
+	margin: 0px 10px 4px 20px;
+	display: flow-root;
+	}
+}
+/*end setting*/
+
+/*header*/
+header img{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+
+@media screen and (max-width:600px){
+	header img{
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	}
+}
+/*end header*/
+
+/*index*/
+.index form{
+	background: white;
+	margin: 100px 200px 0 300px;
+	display: flow-root;
+}
+.index form .post-th{
+	background: var(--primary);
+	color: white;
+	font-size: var(--font-size-3);
+	padding: var(--padding-3);
+	text-align: center;
+}
+.index form input, label{
+	margin: 10px;
+	font-size: var(--font-size-2);
+	padding: 10px;
+}
+.index .view{
+	background: var(--primary);
+	font-size: var(--font-size-3);
+	color: white;
+	margin: 40px 100px 20px 200px; 
+	padding: 10px;
+	cursor: pointer;
+}
+.user-option{
+	display: flow-root;
+}
+.user-option .client{
+	background: var(--primary);
+	font-size: var(--font-size-4);
+	color: white;
+	position: absolute;
+	top: 400px;
+	left: 600px;
+	padding: 10px;
+	cursor: pointer;
+}
+.user-option .admin{
+	background: var(--primary);
+	font-size: var(--font-size-4);
+	color: white;
+	position: absolute;
+	top: 400px;
+	left: 300px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+
+@media screen and (max-width:600px){
+	.index form{
+	background: white;
+	margin: 10px 20px 0 30px;
+	display: flow-root;
+	}
+	.index .view{
+	background: var(--primary);
+	font-size: var(--font-size-3);
+	color: white;
+	margin: 4px 10px 2px 70px; 
+	padding: 10px;
+	cursor: pointer;
+	}
+	.user-option .client{
+	background: var(--primary);
+	font-size: var(--font-size-2);
+	color: white;
+	position: absolute;
+	top: 200px;
+	left: 60px;
+	padding: 10px;
+	cursor: pointer;
+	}
+	.user-option .admin{
+	background: var(--primary);
+	font-size: var(--font-size-2);
+	color: white;
+	position: absolute;
+	top: 200px;
+	left: 120px;
+	padding: 10px;
+	cursor: pointer;
+	}
+}
+/*end index*/
